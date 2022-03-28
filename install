@@ -1,1 +1,1 @@
-installimage -c ubuntu
+./root/.oldroot/nfs/install/installimage -c ubuntu
