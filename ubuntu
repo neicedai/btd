@@ -1,0 +1,15 @@
+DRIVE1 /dev/sda
+FORMATDRIVE2 0
+
+SWRAID 0
+SWRAIDLEVEL 1
+
+BOOTLOADER grub
+
+HOSTNAME ubuntu18
+
+PART swap swap 40G
+PART /boot ext3 512M
+PART /    ext4 all
+
+IMAGE /root/images/ Ubuntu-1804-bionic-64-minimal.tar.gz 
