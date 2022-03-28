@@ -1,3 +1,13 @@
+disk="a b c d"
+for i in ${disk};
+   do
+       a=`udevadm info -q path -n /dev/sd${i}`;
+       if [ ! -n "$a" ]; then
+          break 1 ;
+      else
+      echo DEVPATH=="\"${a}"\", NAME="\"sd${i}"\", MODE="\"0660"\">>/etc/udev/rules.d/80-mydisk.rules;
+      fi
+done
 apt install xfce4 -y
 apt install xrdp -y
 apt install virt-manager -y
