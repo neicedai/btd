@@ -1,4 +1,7 @@
 DRIVE1 /dev/sda
+DRIVE1 /dev/sdb
+DRIVE1 /dev/sdc
+DRIVE1 /dev/sde
 FORMATDRIVE2 0
 
 SWRAID 0
