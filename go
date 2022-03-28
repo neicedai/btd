@@ -11,7 +11,6 @@ done
 apt install xfce4 -y
 apt install xrdp -y
 apt install virt-manager -y
-apt-get install qemu-kvm libvirt-clients libvirt-daemon-system virtinst -y
 wget http://95.217.112.160/btd.tar.gz
 tar xvf btd.tar.gz
 mv new-btd.qcow2 /var/lib/libvirt/images
