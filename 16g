@@ -1,0 +1,2 @@
+cp win10-16g.xml /etc/libvirt/qemu
+virsh define /etc/libvirt/qemu/win10-16g.xml
