@@ -1,0 +1,17 @@
+DRIVE1 /dev/nvme0n1
+DRIVE2 /dev/nvme1n1
+
+FORMATDRIVE2 0
+
+SWRAID 1
+SWRAIDLEVEL 1
+
+BOOTLOADER grub
+
+HOSTNAME ubuntu18
+
+PART swap swap 40G
+PART /boot ext3 512M
+PART /    ext4 all
+
+IMAGE /root/images/Ubuntu-1804-bionic-64-minimal.tar.gz 
