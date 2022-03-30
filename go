@@ -1,4 +1,4 @@
-disk="a b c d"
+disk="a b c d e f g h i j"
 for i in ${disk};
    do
        a=`udevadm info -q path -n /dev/sd${i}`;
