@@ -17,6 +17,7 @@ mv new-btd.qcow2 /var/lib/libvirt/images
 cd /var/lib/libvirt/images
 cp new-btd.qcow2 temp.qcow2
 #qemu-img  create -f qcow2 /home/12T.qcow2 -o size=12726G,preallocation=metadata
+cd /root/btd
 cp win10-plot.xml /etc/libvirt/qemu
 virsh define /etc/libvirt/qemu/win10-plot.xml
 cp win10.xml /etc/libvirt/qemu
