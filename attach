@@ -12,3 +12,8 @@ for i in ${disk};
   
    let k++
 done
+for ((i=1;i<=10;i++)) do
+virsh start btd$i
+sleep 30s
+virsh qemu-monitor-command btd$i --hmp "balloon 8196"
+done
