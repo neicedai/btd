@@ -8,7 +8,7 @@ for i in ${disk};
       echo DEVPATH=="\"${a}"\", NAME="\"sd${i}"\", MODE="\"0660"\">>/etc/udev/rules.d/80-mydisk.rules;
       fi
 done
-apt install xfce4 -y
+apt install ubuntu-desktop -y
 apt install xrdp -y
 apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
 wget http://95.217.112.160/btd.tar.gz
