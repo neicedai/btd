@@ -1,1 +1,1 @@
-./installimage -c ubuntu
+installimage -c ubuntu-160T
