@@ -8,7 +8,7 @@ SWRAIDLEVEL 1
 
 BOOTLOADER grub
 
-HOSTNAME ubuntu18
+HOSTNAME ubuntu22
 
 PART swap swap 40G
 PART /boot ext3 512M
