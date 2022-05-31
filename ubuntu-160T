@@ -14,5 +14,5 @@ PART swap swap 40G
 PART /boot ext3 512M
 PART /    ext4 all
 
-IMAGE /root/images/Ubuntu-2204-jammy-amd64-base.tar.gz
+IMAGE /root/images/Ubuntu-2004-focal-64-minimal.tar.gz
 
