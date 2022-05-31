@@ -17,7 +17,7 @@ mv win10.qcow2 /var/lib/libvirt/images
 cd /var/lib/libvirt/images
 #qemu-img  create -f qcow2 /home/12T.qcow2 -o size=12726G,preallocation=metadata
 cd /root/btd
-#cp win10-plot.xml /etc/libvirt/qemu
-#virsh define /etc/libvirt/qemu/win10-plot.xml
-cp win10.xml /etc/libvirt/qemu
-virsh define /etc/libvirt/qemu/win10.xml
+cp win10-plot.xml /etc/libvirt/qemu
+virsh define /etc/libvirt/qemu/win10-plot.xml
+#cp win10.xml /etc/libvirt/qemu
+#virsh define /etc/libvirt/qemu/win10.xml
