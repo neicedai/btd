@@ -8,9 +8,17 @@ for i in ${disk};
       echo DEVPATH=="\"${a}"\", NAME="\"sd${i}"\", MODE="\"0660"\">>/etc/udev/rules.d/80-mydisk.rules;
       fi
 done
-apt install ubuntu-desktop -y
-apt install xrdp -y
-apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
+apt install xfce4 -y
+sudo apt-get install xserver-xorg-core -y
+sudo apt-get -y install xserver-xorg-input-all
+sudo apt-get install xrdp -y
+sudo apt-get install xorgxrdp
+apt install dbus-x11 -y
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst virt-manager
+sudo apt install dnsmasq-base -y
+sudo virsh net-start default
+virsh net-autostart default
+sudo apt install gir1.2-spiceclientgtk-3.0 -y
 wget http://95.217.112.160/btd.tar.gz
 tar xvf btd.tar.gz
 mv win10.qcow2 /var/lib/libvirt/images
