@@ -10,7 +10,7 @@ for i in ${disk};
 done
 apt install xfce4 -y
 apt install xrdp -y
-apt install virt-manager -y
+apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
 wget http://95.217.112.160/btd.tar.gz
 tar xvf btd.tar.gz
 mv win10.qcow2 /var/lib/libvirt/images
