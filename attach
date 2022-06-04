@@ -1,5 +1,5 @@
 for ((i=1;i<=10;i++)) do
-virt-clone   --original  win10  --name  btd$i   --file  /var/lib/libvirt/images/btd$i.qcow2
+virt-clone   --original  btdmoban  --name  btd$i   --file  /var/lib/libvirt/images/btd$i.qcow2
 done
 disk="a b c d e f g h i j"
 k=1
