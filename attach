@@ -5,7 +5,7 @@ disk="a b c d e f g h i j"
 k=1
 for i in ${disk};
    do
-       a=`virsh attach-disk btd$k /dev/sd${i} sda --targetbus sata --current`
+       a=`virsh attach-disk btd$k /dev/sd${i} sdb --targetbus sata --current`
        
        if [ ! -n "$a" ]; then
           break 1 ;
