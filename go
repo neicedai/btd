@@ -20,8 +20,10 @@ sudo apt install dnsmasq-base -y
 sudo virsh net-start default
 virsh net-autostart default
 sudo apt install gir1.2-spiceclientgtk-3.0 -y
-http://95.217.112.160/win10.qcow2
-http://95.217.112.160/win10bak-clone.qcow2
+wget http://95.217.112.160/win10.btd.gz
+wget http://95.217.112.160/win10bak.tar.gz
+tar xvf win10.btd.gz
+tar xvf win10bak.tar.gz
 mv win10.qcow2 /var/lib/libvirt/images
 mv win10bak-clone.qcow2 /var/lib/libvirt/images
 cd /var/lib/libvirt/images
