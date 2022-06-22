@@ -20,13 +20,15 @@ sudo apt install dnsmasq-base -y
 sudo virsh net-start default
 virsh net-autostart default
 sudo apt install gir1.2-spiceclientgtk-3.0 -y
-wget http://95.217.112.160/btd.tar.gz
-tar xvf btd.tar.gz
+http://95.217.112.160/win10.qcow2
+http://95.217.112.160/win10bak-clone.qcow2
 mv win10.qcow2 /var/lib/libvirt/images
+mv win10bak-clone.qcow2 /var/lib/libvirt/images
 cd /var/lib/libvirt/images
 #qemu-img  create -f qcow2 /home/12T.qcow2 -o size=12726G,preallocation=metadata
 cd /root/btd
 cp win10-plot.xml /etc/libvirt/qemu
+cp btdmoban.xml /etc/libvirt/qemu
 virsh define /etc/libvirt/qemu/win10-plot.xml
 #cp win10.xml /etc/libvirt/qemu
-#virsh define /etc/libvirt/qemu/win10.xml
+virsh define /etc/libvirt/qemu/btdmoban.xml
