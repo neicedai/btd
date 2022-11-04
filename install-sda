@@ -1,1 +1,2 @@
 installimage -c sda
+installimage -c nvme
