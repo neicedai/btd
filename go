@@ -14,6 +14,8 @@ sudo apt-get -y install xserver-xorg-input-all
 sudo apt-get install xrdp -y
 sudo apt-get install xorgxrdp
 apt install dbus-x11 -y
+cd /root
+echo xfce4-session >~/.xsession
 sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst virt-manager -y
 apt-get install qemu-utils -y
 sudo apt install dnsmasq-base -y
