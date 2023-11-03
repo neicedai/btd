@@ -1,0 +1,67 @@
+## ======================================================
+##  Hetzner Online GmbH - installimage - standard config
+## ======================================================
+
+## ====================
+##  HARD DISK DRIVE(S):
+## ====================
+
+# Device Model: SAMSUNG MZ7LM480HCHP-00003, Serial Number: S1YJNXAG802701
+DRIVE1 /dev/sda
+# Device Model: SAMSUNG MZ7LM480HCHP-00003, Serial Number: S1YJNXAG802698
+DRIVE2 /dev/sdb
+
+## ===============
+##  SOFTWARE RAID:
+## ===============
+
+## activate software RAID?  < 0 | 1 >
+SWRAID 1
+
+## Choose the level for the software RAID < 0 | 1 | 10 >
+SWRAIDLEVEL 0
+
+## ==========
+##  HOSTNAME:
+## ==========
+
+## which hostname should be set?
+HOSTNAME Proxmox-VE.yourdomain.localdomain
+
+## ================
+##  NETWORK CONFIG:
+## ================
+
+# IPV4_ONLY no
+
+## =============
+##  MISC CONFIG:
+## =============
+
+USE_KERNEL_MODE_SETTING yes
+
+## ==========================
+##  PARTITIONS / FILESYSTEMS:
+## ==========================
+
+# Define /boot partition and LVM volume group
+PART /boot  ext3  1024M
+PART lvm    vg0    all
+
+## =======================================
+##  LVM THIN PROVISIONING SETUP (LVM-THIN):
+## =======================================
+
+# Create LVM-thin pool
+THINPOOL vg0 thinpool  200G
+
+# Define LVM-thin logical volumes
+LVTHIN vg0 root  /      xfs   20G  thinpool
+LVTHIN vg0 swap  swap   swap  10G  thinpool
+LVTHIN vg0 home  /home  xfs   100G thinpool
+
+## ========================
+##  OPERATING SYSTEM IMAGE:
+## ========================
+
+IMAGE /root/.oldroot/nfs/install/../images/Debian-1107-bullseye-amd64-base.tar.gz
