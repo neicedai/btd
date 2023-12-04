@@ -7,7 +7,7 @@ SWRAID 1
 SWRAIDLEVEL 0
 
 BOOTLOADER grub
-
+IPV4_ONLY yes
 HOSTNAME ubuntu22
 
 PART swap swap 40G
