@@ -10,6 +10,7 @@ BOOTLOADER grub
 
 HOSTNAME ubuntu22
 
+PART /boot/efi esp 256M
 PART swap swap 40G
 PART /boot ext3 512M
 PART /    ext4 all
