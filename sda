@@ -10,7 +10,7 @@ BOOTLOADER grub
 IPV4_ONLY yes
 HOSTNAME ubuntu22
 
-PART swap swap 40G
+#PART swap swap 40G
 PART /boot ext3 512M
 PART /    ext4 all
 
