@@ -8,7 +8,7 @@ SWRAIDLEVEL 0
 
 BOOTLOADER grub
 IPV4_ONLY yes
-HOSTNAME ubuntu22
+HOSTNAME Ubuntu-2004-focal-64-minimal
 
 #PART swap swap 40G
 PART /boot ext3 512M
